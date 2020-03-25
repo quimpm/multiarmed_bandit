@@ -1,0 +1,91 @@
+% !TeX spellcheck = ca
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[simplified]{pgf-umlcd}
+\usepackage{subfiles}
+\usepackage{listings}
+\usepackage[lighttt]{lmodern}
+\usepackage{color}
+
+\graphicspath{ {images/} }
+
+\usetikzlibrary{positioning,fit,calc,arrows.meta, shapes}
+
+\lstset{
+	basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
+	keywordstyle=\bfseries, % Line nums position
+	numberstyle=\tiny,                      % Line-numbers fonts
+	stepnumber=1,                           % Step between two line-numbers
+	numbersep=5pt,                          % How far are line-numbers from code
+	frame=none,                             % A frame around the code
+	tabsize=2,                              % Default tab size
+	captionpos=b,                           % Caption-position = bottom
+	breaklines=true,                        % Automatic line breaking?
+	breakatwhitespace=false,                % Automatic breaks only at whitespace?
+	showspaces=false,                       % Dont make spaces visible
+	showtabs=false,                         % Dont make tabls visible
+	morekeywords={__global__, __device__},  % CUDA specific keywords
+}
+
+%Tot això hauria d'anar en un pkg, però no sé com és fa
+\newcommand*{\assignatura}[1]{\gdef\1assignatura{#1}}
+\newcommand*{\grup}[1]{\gdef\3grup{#1}}
+\newcommand*{\professorat}[1]{\gdef\4professorat{#1}}
+\renewcommand{\title}[1]{\gdef\5title{#1}}
+\renewcommand{\author}[1]{\gdef\6author{#1}}
+\renewcommand{\date}[1]{\gdef\7date{#1}}
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\maketitle}{ %fa el maketitle de nou
+	\begin{titlepage}
+		\raggedright{UNIVERSITAT DE LLEIDA \\
+			Escola Politècnica Superior \\
+			Grau en Enginyeria Informàtica\\
+			\1assignatura\\}
+		\vspace{5cm}
+		\centering\huge{\5title \\}
+		\vspace{3cm}
+		\large{\6author} \\
+		\normalsize{\3grup}
+		\vfill
+		Professorat : \4professorat \\
+		Data : \7date
+\end{titlepage}}
+%Emplenar a partir d'aquí per a fer el títol : no se com es fa el package
+%S'han de renombrar totes, inclús date, si un camp es deixa en blanc no apareix
+
+\tikzset{
+	%Style of nodes. Si poses aquí un estil es pot reutilitzar més facilment
+	pag/.style = {circle, draw=black,
+		minimum width=0.75cm, font=\ttfamily,
+		text centered}
+}
+\title{Restless Bandit}
+\author{Joaquim Picó Mora, Sergi Simón Balcells}
+\date{Divendres 27 de Març}
+\assignatura{Models de Computació i Complexitat}
+\professorat{M.Valls}
+\grup{PraLab2}
+
+%Comença el document
+\begin{document}
+	\maketitle
+	\thispagestyle{empty}
+	
+	\newpage
+	\pagenumbering{roman}
+	\tableofcontents
+	\newpage
+	\pagenumbering{arabic}
+	\section{Introducció}
+	\section{Context}
+	\section{Desenvolupament de la temàtica}
+	\section{Conclusions}
+	\section{Bibliografía}
+	
+\end{document}
+
