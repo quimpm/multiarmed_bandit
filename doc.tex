@@ -11,6 +11,7 @@
 \usepackage{listings}
 \usepackage[lighttt]{lmodern}
 \usepackage{color}
+\usepackage[nottoc,numbib]{tocbibind}
 
 \graphicspath{ {img/} }
 
@@ -54,6 +55,8 @@
 \professorat{M.Valls}
 \grup{PraLab2}
 
+\renewcommand{\refname}{Bibliografia}
+
 %Comença el document
 \begin{document}
 	\maketitle
@@ -73,7 +76,9 @@
 	\subfile{dev/upper.tex}
 	% Un algorisme simplificat d'upper confidence bound utilitzat a un restless
 	\section{Conclusions}
-	\section{Bibliografia}
-	
+	 \subfile{conc/conc.tex}
+	 \bibliographystyle{unsrt}
+	 \bibliography{doc}
+
 \end{document}
 
