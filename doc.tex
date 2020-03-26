@@ -15,23 +15,6 @@
 \graphicspath{ {img/} }
 
 \usetikzlibrary{positioning,fit,calc,arrows.meta, shapes}
-
-\lstset{
-	basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
-	keywordstyle=\bfseries, % Line nums position
-	numberstyle=\tiny,                      % Line-numbers fonts
-	stepnumber=1,                           % Step between two line-numbers
-	numbersep=5pt,                          % How far are line-numbers from code
-	frame=none,                             % A frame around the code
-	tabsize=2,                              % Default tab size
-	captionpos=b,                           % Caption-position = bottom
-	breaklines=true,                        % Automatic line breaking?
-	breakatwhitespace=false,                % Automatic breaks only at whitespace?
-	showspaces=false,                       % Dont make spaces visible
-	showtabs=false,                         % Dont make tabls visible
-	morekeywords={__global__, __device__},  % CUDA specific keywords
-}
-
 %Tot això hauria d'anar en un pkg, però no sé com és fa
 \newcommand*{\assignatura}[1]{\gdef\1assignatura{#1}}
 \newcommand*{\grup}[1]{\gdef\3grup{#1}}
