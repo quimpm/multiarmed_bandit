@@ -2,26 +2,25 @@
 		% La versió relaxada del problema i la seva solució en Index de Gittins i Upper confidence bound
 	\subsection{Upper confidence bound}
 	Que el problema es mostri com a PSPACE-hard significa que el càlcul del mínim és, si no es demostra la igualtat entre
-	les diferents complexitats, tan dificultós que deixa de ser pràctic intentar-ho. Per sort, el problema relaxat a un
+	les diferents complexitats, és tan dificultós que deixa de ser pràctic intentar-ho. Per sort, el problema relaxat a un
 	\textit{k-armed bandits} dona una bona heurística al problema principal. Aquest ja hem dit que és decidible amb una complexitat P
 	 per l'índex de Gittins, però el problema recau en el cost de calcular aquest índex, ja que tot i que sigui polinomial en el temps
 	el cost és bastant elevat, pel que s'utilitzen altres algoritmes que tot i no ser perfectes es queden molt propers a l'òptim del 
-	problema relaxat. Amb aquests algorismes trobem el d'\textit{Upper confidence bound}. \\
+	problema relaxat. Entre aquests algorismes trobem el d'\textit{Upper confidence bound}. \\
 	\\
-	L'algorisme UCB fa les seleccions de a quina màquina jugar en base a l'optimisme. Es a dir, es centra en el millor que pot acabar sent una acció.
+	L'algorisme UCB fa les seleccions de a quina màquina jugar en base a l'optimisme. Es a dir, centrant-se en el millor que podria tindre dur a terme una acció, donada la evidencia obtinguda fins al moment.
 	Seguint aquesta estrategia, una heurística possible és fer la selecció de la màquina seguint la següent formula:
 	\[
 	A_n = argmax_a(Q_n(a) + c\sqrt{\frac{\log (n)}{k_n(a)}})
 	\]
-	On $Q_n(a)$ és el valor actual d'una màquina escura-butxaques $a$. 
-	El valor sota l'arrel és el logaritme del nombre de màquines a les quals hem jugat dividit per $k_n$, 
-	que és el nombre de tirades que hem fet en la màquina $a$. I finalment $c$ és una constant.\\
-	Com el valor actual $Q_n(a)$ és una mitjana, per a tenir aquest valor calculat es mantindran dos valors, la 
-	mitja actual ($m_n$) i  el nombre de tirades que s'han realitzat amb aquest $k_n$: %TODO ficar formula
+	On $Q_n(a)$ és el valor mitjà actual de obtenir una recompensa realitzant l'acció de jugar en una màquina escura-butxaques $a$. 
+	El valor sota l'arrel és el logaritme del nombre de màquines a les quals hem jugat, dividit per $k_n$, 
+	que és el nombre de tirades que hem fet en la màquina $a$. I finalment $c$, que és una constant a escollir.\\
+	 Per calcular $Q_n(a)$ només es mantindran en memoria dos valors per cada acció, la 
+	mitja actual ($m_n$) i  el nombre seleccions que s'han fet per arribar a aquesta acció $k_n$: %TODO ficar formula
 	\[
 	m_{n+1} = m_n + \frac{R_n - m_n}{k_n}
 	\]
 	On $R_n$ és la recompensa que obtenim de realitzar aquesta acció.
 	
-	  
 \end{document}
