@@ -5,17 +5,20 @@
 	\[
 	{NP} \subseteq PSPACE \subseteq {EXP} % - time
 	\]
-	De la mateixa manera que no es sap si $P = NP$ tampoc es sap si $NP = PSPACE$. Demostrar que NP es contingut dins de
-	PSPACE per reducció a l'absurd. Si tenim una màquina NP, és a dir, donada una instància d'un problema ens diu en un temps 
-	polinomial si aquest pertany al problema. Si l'espai per a desenvoluar l'algorisme fos més gran a polinòmic, llavors forçosament
-	per a llegir o escriure aquesta informació és necessitaria aquest temps, pel que arriba a l'absurd amb la definició de NP. % TODO: posar-ho més explicat
+	De la mateixa manera que no es sap si $P = NP$ tampoc es sap si $NP = PSPACE$. La demostració que NP es contingut dins de
+	PSPACE es realitzar per reducció a l'absurd:\\
+	\\
+	 Sigui M una màquina de Turing NP, és a dir, donada una instància d'un problema ens diu en un temps 
+	polinomial si aquest pertany al problema. Si l'espai per a desenvolupar l'algorisme fos més gran a polinòmic, llavors forçosament
+	per a llegir o escriure aquesta informació es necessitaria aquest temps, pel que arriba a l'absurd amb la definició de la màquina M. % TODO: posar-ho més explicat
 	\\
 	\\
 	En aquesta complexitat tenim el problema de \textit{Restless bandit}, on l'explicació de per què és així es va fer al 1999, en 
 	l'article [].% TODO posar la referència. 
-	En aquest s'explica un problema de xarxes que es demostrar ser exponencial. Al mateix temps, un problema relaxat d'aquest
+	En aquest s'explica un problema de xarxes que es demostra ser exponencial. Al mateix temps, un problema relaxat d'aquest
 	es demostra ser PSPACE-complet, és a dir, tots els problemes de PSPACE poden ser reduïts a aquest problema i aquest pot
-	ser reduït a tots els problemes de PSPACE. Finalment es dona una formula de cost del problema de \textit{restless bandit} i
-	es redueix el problema relaxat al de \textit{restless bandit}, demostrant que és PSPACE-hard (tots els problemes de PSPACE són
+	ser reduït a tots els problemes de PSPACE. Finalment es dóna una fórmula de cost del problema de \textit{restless bandit} i
+	es redueix el problema relaxat a aquest, demostrant que és PSPACE-hard (tots els problemes de PSPACE són
 	reduïbles a aquest). %TODO: tot això és molt dens, no sé fins a quin punt està bé.
+	
 \end{document}
