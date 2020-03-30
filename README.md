@@ -69,5 +69,17 @@ un temps menor a l'EXP, i per a fer-ho demostren que un dels problemes relaxats
 es diu com reduir aquest problema al problema de restless bandit, deixant el nostre
 problema com a PSPACE.
 
+## Upper Confidence Bound
+
+*Video amb cara*
+
+Que el problema sigui PSPACE-hard ens dona a pensar que una solució optima amb un
+temps raonable és, al menys, dificil. Llavors, com podem afrontar un problema que
+troba el seu òptim és poc raonable. La primera pregunta que ens hem de fer és si
+la diferència entre un suboptim i un optim ens interessa. Llavors un mecanisme
+que es sol a fer és la relaxació del problema. Per exemple, un problema de restless
+bandit relaxat és un problema de multiarmed bandit. Una solució d'aquest problema 
+està demostrat que és una bona heurística pel problema de restless. Dins dels algorismes
+que es solen a utilitzar per aquests problemes és el de **Upper Confidence Bound**.
 
 
